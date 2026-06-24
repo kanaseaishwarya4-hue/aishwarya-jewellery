@@ -1,0 +1,453 @@
+/* लक्झरी डिझाईन रिसेट आणि प्रिमियम टायपोग्राफी */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAF8F5; /* मऊ मॅट ऑफ-व्हाईट */
+    color: #111;
+    overflow-x: hidden;
+}
+
+/* १. लाईव्ह गोल्ड रेट बार */
+.luxury-top-bar {
+    background-color: #0F090A;
+    color: #E3D3BA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 11px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(214, 175, 55, 0.25);
+}
+.gold-rate-ticker {
+    display: flex;
+    gap: 25px;
+}
+.ticker-item i {
+    color: #D4AF37;
+    font-size: 8px;
+    margin-right: 5px;
+}
+.top-utility-links a {
+    color: #E3D3BA;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+.top-utility-links a:hover {
+    color: #D4AF37;
+}
+
+/* २. अल्ट्रा-प्रीमियम हेडर */
+.main-header {
+    background: #ffffff;
+    padding: 25px 5%;
+    border-bottom: 1px solid #ECE7E1;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* सर्च बार */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #A89276;
+    width: 250px;
+    padding-bottom: 5px;
+}
+.search-wrapper input {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    width: 100%;
+    background: transparent;
+}
+.search-wrapper button {
+    background: transparent;
+    border: none;
+    color: #4A0E10;
+    cursor: pointer;
+}
+
+/* ब्रँड मोनोग्राम */
+.brand-monogram {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-shield {
+    margin-bottom: 8px;
+}
+.hero-logo {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #D4AF37;
+    padding: 3px;
+}
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4A0E10; /* तनिष्क रिच वाईन रेड */
+    letter-spacing: 4px;
+    line-height: 1;
+}
+.subtitle-tag {
+    font-size: 10px;
+    letter-spacing: 6px;
+    color: #D4AF37;
+    font-weight: 600;
+    margin-top: 6px;
+    display: block;
+}
+
+/* युझर ॲक्शन्स */
+.luxury-ui-actions {
+    display: flex;
+    gap: 30px;
+}
+.ui-btn {
+    text-decoration: none;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+}
+.ui-btn i {
+    font-size: 20px;
+    color: #4A0E10;
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+}
+.ui-btn:hover i {
+    color: #D4AF37;
+    transform: translateY(-3px);
+}
+.bag-wrapper {
+    position: relative;
+}
+.badge-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #D4AF37;
+    color: white;
+    font-size: 9px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ३. मेगा मेनू डिझाईन */
+.mega-navbar {
+    background: #fff;
+    border-bottom: 1px solid #ECE7E1;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.root-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.menu-link {
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+.menu-link:hover, .menu-link.active {
+    color: #4A0E10;
+}
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 0; height: 2px;
+    background-color: #D4AF37;
+    transition: width 0.3s;
+}
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* मेगा ड्रॉपडाऊन बॉक्स */
+.has-mega { position: relative; }
+.mega-dropdown {
+    position: fixed;
+    top: 153px; left: 0; width: 100%;
+    background: #ffffff;
+    border-bottom: 3px solid #D4AF37;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    opacity: 0; visibility: hidden;
+    transition: 0.3s ease;
+    padding: 40px 10%;
+    z-index: 100;
+}
+.has-mega:hover .mega-dropdown {
+    opacity: 1; visibility: visible;
+}
+.mega-grid {
+    display: flex;
+    justify-content: space-between;
+}
+.mega-col h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: #4A0E10;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F0EAE1;
+    padding-bottom: 5px;
+}
+.mega-col a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+.mega-col a:hover { color: #D4AF37; }
+.mega-featured-img img {
+    height: 100px; width: 150px; object-fit: cover;
+    border: 1px solid #D4AF37;
+}
+.mega-featured-img p {
+    font-size: 11px; font-style: italic; color: #777; margin-top: 5px;
+}
+
+/* ४. सिनेमॅटिक स्लाईडर */
+.cinematic-slider {
+    position: relative;
+    height: 580px;
+    background: #000;
+    overflow: hidden;
+}
+.hero-slide {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    opacity: 0; visibility: hidden;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.hero-slide.active {
+    opacity: 1; visibility: visible;
+}
+.slide-bg-media {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.hero-text-container {
+    position: relative;
+    z-index: 5;
+    max-width: 650px;
+}
+.gold-accent-tag {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+.hero-display-title {
+    font-family: 'Cinzel', serif;
+    font-size: 54px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.hero-lead {
+    font-size: 15px;
+    color: #E0D8CE;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+.hero-cta-group {
+    display: flex;
+    gap: 20px;
+}
+.btn-luxury {
+    background: #D4AF37;
+    color: #111;
+    border: none;
+    padding: 15px 35px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-luxury:hover {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(255,255,255,0.2);
+}
+.btn-luxury-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #D4AF37;
+    padding: 15px 35px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-luxury-outline:hover {
+    background: #D4AF37;
+    color: #111;
+}
+.slider-nav-arrows {
+    position: absolute;
+    bottom: 40px; right: 5%;
+    z-index: 10;
+    display: flex;
+    gap: 15px;
+}
+.nav-arrow {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(214,175,55,0.4);
+    color: white;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-arrow:hover { background: #D4AF37; color: #111; }
+
+/* ५. कॅटेगरी शोकेस */
+.elite-categories { padding: 80px 5% 40px; }
+.section-header-center { text-align: center; margin-bottom: 50px; }
+.gold-sub { font-family: 'Cinzel', serif; color: #D4AF37; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
+.luxury-heading { font-family: 'Cinzel', serif; font-size: 32px; color: #4A0E10; margin-top: 5px; }
+
+.circle-showcase-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.premium-circle-card { text-align: center; cursor: pointer; }
+.circle-wrapper {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    border: 1px solid #D4AF37;
+    padding: 6px;
+    background: #fff;
+    transition: transform 0.4s;
+    overflow: hidden;
+}
+.premium-circle-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.premium-circle-card h4 { font-size: 13px; font-weight: 600; color: #333; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+.premium-circle-card:hover .circle-wrapper { transform: scale(1.08); box-shadow: 0 10px 25px rgba(74,14,16,0.1); }
+
+/* ६. लक्झरी प्रॉडक्ट ग्रिड */
+.haut-products-section { padding: 40px 5% 100px; }
+.luxury-product-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.product-luxury-card { background: #fff; width: 340px; border: 1px solid #EFEAE2; position: relative; }
+
+.img-vault { position: relative; height: 320px; overflow: hidden; background: #FAF6F0; }
+.img-vault img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.product-luxury-card:hover .img-vault img { transform: scale(1.06); }
+
+/* कार्ड होव्हर ॲक्शन्स */
+.luxury-card-overlay {
+    position: absolute;
+    bottom: -60px; left: 0; width: 100%;
+    display: flex; background: rgba(15,9,10,0.85);
+    transition: bottom 0.3s ease;
+}
+.product-luxury-card:hover .luxury-card-overlay { bottom: 0; }
+.luxury-card-overlay button {
+    flex: 1; padding: 15px 0; background: transparent; border: none;
+    color: #fff; font-size: 12px; font-weight: 500; cursor: pointer;
+}
+.luxury-card-overlay button:hover { color: #D4AF37; background: rgba(255,255,255,0.05); }
+
+.hallmark-badge { position: absolute; top: 15px; left: 15px; background: #4A0E10; color: #D4AF37; font-size: 9px; font-weight: 600; padding: 5px 10px; text-transform: uppercase; }
+.card-wishlist { position: absolute; top: 15px; right: 15px; background: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; color: #4A0E10; cursor: pointer; z-index: 5; }
+
+.card-details { padding: 25px; text-align: center; position: relative; }
+.card-details h4 { font-family: 'Cinzel', serif; font-size: 18px; color: #111; }
+.prod-desc { font-size: 13px; color: #666; margin: 6px 0 15px; }
+.price-block { margin-bottom: 20px; }
+.luxury-price { font-family: 'Cinzel', serif; font-weight: 600; color: #4A0E10; font-size: 15px; }
+
+.add-to-vault-btn {
+    background: transparent; border: 1px solid #4A0E10; color: #4A0E10;
+    width: 100%; padding: 14px 0; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; cursor: pointer; transition: 0.3s;
+}
+.add-to-vault-btn:hover { background: #4A0E10; color: white; }
+
+/* ७. व्हीआयपी पॉप-अप */
+.luxury-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15,9,10,0.8); z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: 0.4s;
+}
+.luxury-modal-overlay.open { opacity: 1; pointer-events: auto; }
+.vip-modal-box { background: #fff; padding: 10px; width: 90%; max-width: 460px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.modal-gild-border { border: 1px solid #D4AF37; padding: 35px 25px; text-align: center; position: relative; }
+.close-modal-btn { position: absolute; top: 10px; right: 15px; font-size: 26px; border: none; background: transparent; color: #4A0E10; cursor: pointer; }
+
+.modal-gild-border h4 { font-family: 'Cinzel', serif; font-size: 22px; color: #4A0E10; margin-bottom: 10px; }
+.modal-gild-border p { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 25px; }
+
+.input-row { display: flex; align-items: center; border-bottom: 1px solid #C5B299; margin-bottom: 20px; padding-bottom: 6px; }
+.input-row i { color: #A89276; margin-right: 12px; font-size: 14px; }
+.input-row input, .input-row select { width: 100%; border: none; outline: none; font-size: 13px; background: transparent; }
+
+.gilded-submit-btn { background: #4A0E10; color: #fff; border: none; width: 100%; padding: 14px; font-size: 11px; font-weight: 600; letter-spacing: 2px; cursor: pointer; transition: 0.3s; }
+.gilded-submit-btn:hover { background: #D4AF37; color: #111; }
+
+/* ८. फुटर */
+.royal-footer { background: #0F090A; color: #D8CCB7; padding: 80px 5% 30px; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(214,175,55,0.15); }
+.footer-brand-summary { flex: 1.5; min-width: 280px; }
+.footer-logo-title { font-family: 'Cinzel', serif; color: #D4AF37; letter-spacing: 3px; margin-bottom: 20px; }
+.brand-philosophy { font-size: 13px; line-height: 1.7; color: #A69C8E; }
+.royal-socials { display: flex; gap: 20px; margin-top: 25px; }
+.royal-socials a { color: #0F090A; background: #D4AF37; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+.royal-socials a:hover { background: white; color: #4A0E10; }
+
+.footer-links-col { flex: 1; min-width: 200px; }
+.footer-links-col h6 { font-family: 'Cinzel', serif; color: #D4AF37; font-size: 14px; margin-bottom: 20px; letter-spacing: 1px; }
+.footer-links-col a { display: block; color: #A69C8E; text-decoration: none; font-size: 13px; margin-bottom: 12px; transition: 0.3s; }
+.footer-links-col a:hover { color: white; padding-left: 5px; }
+.footer-copyright-bar { text-align: center; padding-top: 30px; font-size: 12px; color: #666; }
